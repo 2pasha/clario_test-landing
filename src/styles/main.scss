@@ -1,0 +1,11 @@
+@use './variables' as *;
+@use '../components/Header/Header.scss';
+@use './reset';
+@use './typography';
+@use './mixins';
+@use './container';
+
+
+body {
+  font-weight: $font-regular;
+}

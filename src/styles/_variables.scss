@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+$font-primary: 'Poppins', sans-serif;
+
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 600;
+
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1440px,
+);
+
+$color-green: #00600C;
+$color-black: #000000;
+$color-white: #FFFFFF;

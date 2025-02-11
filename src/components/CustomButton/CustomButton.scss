@@ -1,0 +1,23 @@
+@use '../../styles/variables' as *;
+
+.button {
+  font-family: $font-primary;
+  font-weight: $font-bold;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+  transition: all 0.3s ease;
+  border: none;
+
+  &--green {
+    background-color: $color-green;
+    color: $color-white;
+
+    &:hover {
+      box-shadow: 3px 3px 0px 0px #033D0A;
+    }
+  }
+}
