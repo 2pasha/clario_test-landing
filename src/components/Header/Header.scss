@@ -1,4 +1,5 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .header {
   width: 100%;
@@ -9,16 +10,36 @@
     align-items: center;
     margin-top: 8px;
     padding-bottom: 8px;
+
+    @include onDesktop {
+      margin-top: 12px;
+      padding-bottom: 12px;
+    }
   }
 
   &__logo {
-    display: block;
+    display: flex;
+    align-items: center;
+    position: relative;
     width: 50px;
     height: 50px;
 
     img {
       width: 100%;
       height: auto;
+    }
+
+    @include onDesktop {
+      &::after {
+        content: "Logo";
+        position: absolute;
+        left: 58px;
+        font-family: $font-logo;
+        font-weight: $font-regular;
+        font-size: 25px;
+        line-height: 23px;
+        color: $color-dark-green;
+      }
     }
   }
 
@@ -39,38 +60,66 @@
     &.is-active img {
       transform: rotate(180deg);
     }
+
+    @include onDesktop {
+      display: none;
+    }
   }
 
   &__devider {
     border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.2);
+
+    @include onDesktop {
+      display: none;
+    }
   }
 
   &__nav {
+    @include onDesktop {
+      padding: 0;
+    }
+
     &-list {
       list-style-type: none;
+
+      @include onDesktop {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
 
       li {
         padding: 15px 0;
         border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.05);
         transition: opacity 0.2s ease;
-        
+
         &:hover {
           opacity: 0.7;
         }
+
+        @include onDesktop {
+          padding: 0;
+          border: 0;
+        }
       }
     }
-    
+
     &-link {
       width: 100%;
       text-align: left;
       font-weight: $font-medium;
-      cursor: pointer;      
+      cursor: pointer;
     }
   }
 
   &__button {
     display: flex;
     margin-top: 67px;
+
+    @include onDesktop {
+      margin-top: 0;
+      margin-left: 72px;
+    }
   }
 }
 
@@ -92,5 +141,16 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+
+  @include onDesktop {
+    position: static;
+    height: auto;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    display: flex;
+    align-items: center;
   }
 }

@@ -7,6 +7,17 @@ import CustomButton from "../CustomButton/CustomButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -24,10 +35,12 @@ const Header = () => {
     const element = document.getElementById(sectionId);
 
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
       setIsMenuOpen(false);
+      setTimeout(() => {
+        element.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 300);
     }
   };
 
@@ -38,62 +51,62 @@ const Header = () => {
           <img src={logo} alt="Logo" />
         </div>
 
-        <a
+        <button
           className={`header__menu ${isMenuOpen ? "is-active" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle manu"
         >
           <img src={isMenuOpen ? close : burger} alt="Burger menu" />
-        </a>
-      </div>
+        </button>
 
-      <div className={`menu ${isMenuOpen ? "is-open" : ""}`}>
-        <hr className="header__devider" />
-        <nav className="header__nav container">
-          <ul className="header__nav-list">
-            <li>
-              <a
-                className="header__nav-link"
-                onClick={() => scrollToSection("features")}
-              >
-                Features
-              </a>
-            </li>
-            <li>
-              <a
-                className="header__nav-link"
-                onClick={() => scrollToSection("about")}
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                className="header__nav-link"
-                onClick={() => scrollToSection("blog")}
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <a
-                className="header__nav-link"
-                onClick={() => scrollToSection("contacts")}
-              >
-                Contacts
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div className={`menu ${isMenuOpen ? "is-open" : ""}`}>
+          <hr className="header__devider" />
+          <nav className="header__nav container">
+            <ul className="header__nav-list">
+              <li>
+                <a
+                  className="header__nav-link"
+                  onClick={() => scrollToSection("features")}
+                >
+                  Features
+                </a>
+              </li>
+              <li>
+                <a
+                  className="header__nav-link"
+                  onClick={() => scrollToSection("about")}
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  className="header__nav-link"
+                  onClick={() => scrollToSection("blog")}
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  className="header__nav-link"
+                  onClick={() => scrollToSection("contacts")}
+                >
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-        <CustomButton
-          title={"Button"}
-          type="green"
-          paddingX="112px"
-          paddingY="13px"
-          className="container header__button"
-          onClick={() => console.log("Button from menu clicked")}
-        />
+          <CustomButton
+            title={"Button"}
+            type="green"
+            paddingX={isDesktop ? '32px' : '112px'}
+            paddingY="13px"
+            className="container header__button"
+            onClick={() => console.log("Button from navifation has clicked")}
+          />
+        </div>
       </div>
     </header>
   );
