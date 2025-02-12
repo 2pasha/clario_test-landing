@@ -1,3 +1,4 @@
+import Features from "./components/Features/Features";
 import Timer from "./components/Timer/Timer"
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <Timer endDate={endDate} />
+      <Features />
     </>
   )
 }

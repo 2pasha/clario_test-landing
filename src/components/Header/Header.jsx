@@ -104,7 +104,7 @@ const Header = () => {
             paddingX={isDesktop ? "32px" : "112px"}
             paddingY="13px"
             className="container header__button"
-            onClick={() => console.log("Button from navifation has clicked")}
+            onClick={() => console.log("Button from navigation has clicked")}
           />
         </div>
       </div>

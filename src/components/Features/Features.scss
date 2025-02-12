@@ -1,0 +1,64 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.features {
+  margin-top: 14px;
+  padding: 48px 0 105px;
+  background: linear-gradient(
+    221.96deg,
+    #75c5ae 22.47%,
+    #70a370 49.59%,
+    #528850 74.55%
+  );
+
+  @include onDesktop {
+    padding: 67px 0 83px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: $font-bold;
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: -1px;
+
+    & span {
+      color: $color-green;
+    }
+
+    @include onDesktop {
+      font-size: 48px;
+      line-height: 54px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 9px;
+    font-weight: $font-thin;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+
+    @include onDesktop {
+      margin-top: 23px;
+      font-weight: $font-regular;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  &__button {
+    margin-top: 27px;
+
+    @include onDesktop {
+      margin-top: 41px;
+    }
+  }
+}
