@@ -16,8 +16,8 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="features" id="features">
-      <div className="features__content">
+    <section className="features" id="features">
+      <div className="features__content container">
         <h1 className="features__title">
           Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit.
         </h1>
@@ -37,7 +37,7 @@ const Features = () => {
           }
         />
       </div>
-    </div>
+    </section>
   );
 };
 

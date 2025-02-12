@@ -21,6 +21,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    @include onDesktop {
+      max-width: 732px !important; 
+    }
   }
 
   &__title {

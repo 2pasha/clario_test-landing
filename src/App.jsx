@@ -1,3 +1,4 @@
+import About from "./components/About/About";
 import Features from "./components/Features/Features";
 import Timer from "./components/Timer/Timer"
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <Timer endDate={endDate} />
       <Features />
+      <About />
     </>
   )
 }

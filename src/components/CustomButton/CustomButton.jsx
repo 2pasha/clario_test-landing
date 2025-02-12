@@ -2,7 +2,7 @@
 import './CustomButton.scss';
 
 const CustomButton = ({
-  title,
+  title = 'Download',
   type = "green",
   paddingX,
   paddingY,
