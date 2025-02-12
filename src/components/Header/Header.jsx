@@ -101,7 +101,7 @@ const Header = () => {
           <CustomButton
             title={"Button"}
             type="green"
-            paddingX={isDesktop ? '32px' : '112px'}
+            paddingX={isDesktop ? "32px" : "112px"}
             paddingY="13px"
             className="container header__button"
             onClick={() => console.log("Button from navifation has clicked")}
