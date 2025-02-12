@@ -1,8 +1,11 @@
+import Timer from "./components/Timer/Timer"
+
 function App() {
+  const endDate = new Date(Date.now() + 11 * 60 * 1000);
 
   return (
     <>
-      <h1>hi</h1>
+      <Timer endDate={endDate} />
     </>
   )
 }

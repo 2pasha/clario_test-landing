@@ -1,7 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Righteous&display=swap');
 
+@font-face {
+  font-family: 'MarkOT-Heavy';
+  src: url("https://db.onlinewebfonts.com/t/1846241fbfa2b978f919cb6d3ac51df7.ttf")format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MarkOT';
+  src: url("https://db.onlinewebfonts.com/t/450fdebcd9b47d4e245c0272405e0cf2.ttf")format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
 $font-primary: 'Poppins', sans-serif;
 $font-logo: 'Righteous', sans-serif;
+$font-timer-heavy: 'MarkOT-Heavy', sans-serif;
+$font-timer: 'MarkOT', sans-serif;
+
 
 $font-regular: 400;
 $font-medium: 500;
