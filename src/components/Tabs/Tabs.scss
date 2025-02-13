@@ -64,7 +64,6 @@
     background: #cfe9d5;
     border-radius: 24px;
     padding: 30px 24px;
-    animation: slideUp 0.5s ease forwards;
 
     @include onDesktop {
       padding: 60px 48px;
@@ -98,17 +97,6 @@
     @include onDesktop {
       margin-top: 10px;
     }
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

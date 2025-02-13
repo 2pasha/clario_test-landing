@@ -1,5 +1,6 @@
 import About from "./components/About/About";
 import Blog from "./components/BLog/Blog";
+import Contacts from "./components/Contacts/Contacts";
 import Features from "./components/Features/Features";
 import Slider from "./components/Slider/Slider";
 import Timer from "./components/Timer/Timer"
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Blog /> 
       <Slider />
+      <Contacts />
     </>
   )
 }

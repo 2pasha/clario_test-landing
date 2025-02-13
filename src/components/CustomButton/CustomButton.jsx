@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
-import './CustomButton.scss';
+import "./CustomButton.scss";
 
 const CustomButton = ({
-  title = 'Download',
+  title = "Download",
   type = "green",
   paddingX,
   paddingY,
   onClick,
+  width,
   className = "",
   ...props
 }) => {
@@ -15,6 +16,10 @@ const CustomButton = ({
 
   if (paddingX || paddingY) {
     customStyle.padding = `${paddingY || "14px"} ${paddingX || "40px"}`;
+  }
+
+  if (width) {
+    customStyle.width = width || '272px';
   }
 
   return (
