@@ -1,0 +1,83 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.blog {
+  background: #eefff0;
+  padding: 33px 0 48px;
+  text-align: center;
+
+  @include onDesktop {
+    padding: 54px 0 72px;
+  }
+
+  &__title {
+    font-weight: $font-bold;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0px;
+
+    @include onDesktop {
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: -1px;
+    }
+  }
+
+  &__cols {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+
+    @include onDesktop {
+      margin-top: 65px;
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-img {
+      width: 132px;
+      height: 96px;
+      object-fit: contain;
+    }
+
+    &-title {
+      margin-top: 15px;
+      font-weight: $font-bold;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0px;
+      color: $color-green-text;
+    }
+
+    &-list {
+      list-style-type: none;
+      margin-top: 18px;
+      text-align: left;
+      font-weight: $font-thin;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        content: "";
+        background: url(/src/assets/tick.svg);
+        width: 13px;
+        height: 12px;
+      }
+    }
+  }
+}
