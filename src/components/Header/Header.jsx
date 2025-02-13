@@ -4,20 +4,11 @@ import logo from "../../assets/logo.svg";
 import burger from "../../assets/burger.svg";
 import close from "../../assets/close.svg";
 import CustomButton from "../CustomButton/CustomButton";
+import { useIsDesktop } from "../../hooks/useIsDesktop";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1024);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isDesktop = useIsDesktop(); 
 
   useEffect(() => {
     if (isMenuOpen) {

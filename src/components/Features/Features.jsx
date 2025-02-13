@@ -1,19 +1,9 @@
-import { useEffect, useState } from "react";
 import CustomButton from "../CustomButton/CustomButton";
 import "./Features.scss";
+import { useIsDesktop } from "../../hooks/useIsDesktop";
 
 const Features = () => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1024);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isDesktop = useIsDesktop();
 
   return (
     <section className="features" id="features">
