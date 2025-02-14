@@ -25,5 +25,9 @@
     background-color: transparent;
     color: $color-green;
     border: 2px solid $color-green;
+
+    &:hover {
+      box-shadow: 3px 3px 0px 0px #033D0A;
+    }
   }
 }

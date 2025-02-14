@@ -41,7 +41,7 @@ const Contacts = () => {
             type="white"
             width={isDesktop ? "" : "272px"}
             paddingX={isDesktop ? "48px" : "100px"}
-            paddingY={isDesktop ? "17px" : "12px"}
+            paddingY={isDesktop ? "15px" : "12px"}
             onClick={() =>
               console.log('Button "Buy now" from contacts was cliked')
             }
