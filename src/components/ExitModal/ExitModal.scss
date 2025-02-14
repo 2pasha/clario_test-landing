@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .modal {
   position: fixed;
   top: 0;
@@ -20,7 +22,7 @@
   }
 
   &__content {
-    background: white;
+    background: $color-white;
     padding: 32px;
     border-radius: 8px;
     max-width: 400px;
@@ -68,12 +70,12 @@
     }
 
     &--confirm {
-      background: #2BA84A;
+      background: $color-green;
       border: none;
-      color: white;
+      color: $color-white;
 
       &:hover {
-        background: darken(#2BA84A, 5%);
+        background: darken($color-green, 5%);
       }
     }
   }

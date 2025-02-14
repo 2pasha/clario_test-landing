@@ -40,12 +40,10 @@
 
     @include onDesktop {
       min-height: 420px;
-      // min-width: 42vw;
       grid-column: 2;
       grid-row: 1 / 3;
       display: flex;
       flex-direction: column;
-      // justify-self: end;
       align-self: flex-start;
     }
   }
@@ -74,8 +72,6 @@
         max-width: 510px;
         top: 150px;
         left: -70px;
-        // right: 0;
-        // bottom: 0;
       }
     }
   }

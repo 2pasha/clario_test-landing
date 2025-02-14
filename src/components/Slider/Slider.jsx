@@ -45,7 +45,6 @@ const Slider = () => {
           speed={500}
           watchSlidesProgress={true}
           loopPreventsSliding={false}
-          loopedSlides={3}
           navigation={{
             prevEl: ".slider-prev",
             nextEl: ".slider-next",
